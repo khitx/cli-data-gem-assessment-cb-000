@@ -21,7 +21,7 @@ class Ebooks::Books
     books = []
 #    binding.pry
     doc.css("div.promotions div.col-sm-9").each do |e|
-      binding.pry
+#      binding.pry
       book = self.new
       book.title = e.search("div.book-title a").first.text.strip
       book.author = e.search("small.book-author a").text.strip
