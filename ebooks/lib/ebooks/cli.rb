@@ -13,8 +13,8 @@ class Ebooks::CLI
     puts ''
     puts "today's eBooks:"
     puts ''
-    books = Ebooks::Books.scrape_books
-    books[0].each.with_index(1) do |book, i|
+    @books = Ebooks::Books.scrape_books
+    @books[0].each.with_index(1) do |book, i|
       puts "#{i}. #{book.title} - #{book.author}"
       puts ''
     end
@@ -27,7 +27,6 @@ class Ebooks::CLI
       input = gets.strip.downcase
 
       if input.to_i > 0 && input.to_i <= @books.count
-        #binding.pry
         book = @books[input.to_i - 1]
         puts ''
         puts "#{book.title} - #{book.author} - #{book.desc}"
