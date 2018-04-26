@@ -13,12 +13,9 @@ class Ebooks::CLI
     puts ''
     puts "today's eBooks:"
     puts ''
-    #@books = []
     books = Ebooks::Books.scrape_books
-    #binding.pry
     books[0].each.with_index(1) do |book, i|
-      #binding.pry
-      puts "#{i}. #{book.title} - #{book.author} - #{book.desc}"
+      puts "#{i}. #{book.title} - #{book.author}"
       puts ''
     end
   end
