@@ -25,10 +25,10 @@ class Ebooks::Books
       book = self.new
       book.title = e.search("div.book-title a").first.text.strip
       book.author = e.search("small.book-author a").text.strip
-      book.desc = e.search("p.blurb").text.strip
+      #book.desc = e.search("p.blurb").text.strip
       books << book
     end
-    #binding.pry
+    binding.pry
     books
   end
 
