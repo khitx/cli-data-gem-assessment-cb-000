@@ -29,7 +29,9 @@ class Ebooks::CLI
       if input.to_i > 0 && input.to_i <= @books[0].count
         book = @books[0][input.to_i - 1]
         puts ''
-        puts "#{book.title} - #{book.author} - #{book.desc}"
+        puts "#{book.title}"
+        puts "#{book.author}"
+        puts "#{book.desc}"
         puts ''
       elsif input == 'list'
         list_books
