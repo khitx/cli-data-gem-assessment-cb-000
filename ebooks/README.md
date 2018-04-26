@@ -1,8 +1,6 @@
 # Ebooks
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ebooks`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+eBooks is a small app that lists the books currently available on BookBub. The app starts with a list of books and authors then allows the user to select a book to get a description. The user can also regenirate the list at any time.
 
 ## Installation
 
