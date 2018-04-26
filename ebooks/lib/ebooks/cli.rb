@@ -22,6 +22,7 @@ class Ebooks::CLI
   def menu
     input = nil
     while input != 'exit'
+      puts ''
       puts "Enter number, exit, or list"
       input = gets.strip.downcase
 
