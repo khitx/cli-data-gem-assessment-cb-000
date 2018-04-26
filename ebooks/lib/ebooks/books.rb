@@ -28,7 +28,7 @@ class Ebooks::Books
       book.desc = e.search("p.blurb").text.strip
       books << book
     end
-    binding.pry
+    #binding.pry
     books
   end
 
