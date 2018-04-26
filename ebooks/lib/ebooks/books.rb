@@ -24,6 +24,7 @@ class Ebooks::Books
       book.title = doc.search("div.book-title a").text.strip
       book.author = doc.search("small.book-author a").text.strip
       book.desc = doc.search("p.blurb").text.strip
+      books << book
     end
     books
   end
