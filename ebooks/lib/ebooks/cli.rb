@@ -26,7 +26,7 @@ class Ebooks::CLI
       puts "Enter number, exit, or list"
       input = gets.strip.downcase
 
-      if input.to_i > 0 && input.to_i <= @books.count
+      if input.to_i > 0 && input.to_i <= @books[0].count
         book = @books[0][input.to_i - 1]
         puts ''
         puts "#{book.title} - #{book.author} - #{book.desc}"
