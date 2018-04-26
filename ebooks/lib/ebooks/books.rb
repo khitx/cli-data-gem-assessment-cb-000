@@ -18,7 +18,7 @@ class Ebooks::Books
 
   def self.scrape_BookBub
     doc = Nokogiri::HTML(open("https://www.bookbub.com/ebook-deals/free-ebooks"))
-    books = ()
+    books = []
 #    binding.pry
     doc.css("div.promotions div.col-sm-9").each do |e|
 #      binding.pry
