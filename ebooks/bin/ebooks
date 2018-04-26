@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+#require './lib/ebooks'
+require "bundler/setup"
+require "ebooks"
+
+
+Ebooks::CLI.new.call
