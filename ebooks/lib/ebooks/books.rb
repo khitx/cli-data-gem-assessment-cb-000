@@ -23,9 +23,9 @@ class Ebooks::Books
     doc.css("div.promotions div.col-sm-9").each do |book|
       binding.pry
       book = self.new
-      book.title = doc.search("div.book-title a").text.strip
-      book.author = doc.search("small.book-author a").text.strip
-      book.desc = doc.search("p.blurb").text.strip
+      book.title = book.search("div.book-title a").text.strip
+      book.author = book.search("small.book-author a").text.strip
+      book.desc = book.search("p.blurb").text.strip
       books << book
     end
     books
