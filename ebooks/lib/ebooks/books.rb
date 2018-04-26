@@ -20,12 +20,12 @@ class Ebooks::Books
     doc = Nokogiri::HTML(open("https://www.bookbub.com/ebook-deals/free-ebooks"))
     books = []
 #    binding.pry
-    doc.css("div.promotions div.col-sm-9").each do |book|
+    doc.css("div.promotions div.col-sm-9").each do |e|
       binding.pry
       book = self.new
-      book.title = book.search("div.book-title a").first.text.strip
-      book.author = book.search("small.book-author a").text.strip
-      book.desc = book.search("p.blurb").text.strip
+      book.title = e.search("div.book-title a").first.text.strip
+      book.author = e.search("small.book-author a").text.strip
+      book.desc = e.search("p.blurb").text.strip
       books << book
     end
     books
