@@ -15,8 +15,8 @@ class Ebooks::CLI
     puts ''
     @books = Ebooks::Books.scrape_books
     @books[0].each.with_index(1) do |book, i|
-      puts "#{i}. #{book.title} - #{book.author}"
       puts ''
+      puts "#{i}. #{book.title} - #{book.author}"
     end
   end
 
