@@ -27,7 +27,7 @@ class Ebooks::CLI
       input = gets.strip.downcase
 
       if input.to_i > 0 && input.to_i <= @books.count
-        book = @books[input.to_i - 1]
+        book = @books[0][input.to_i - 1]
         puts ''
         puts "#{book.title} - #{book.author} - #{book.desc}"
         puts ''
